@@ -1,0 +1,20 @@
+version: '2'
+services:
+  dev:
+    image: victor/node-web-app
+    container_name: data_api
+    ports:
+     - "4000:4000"
+    volumes:
+     - .:/app
+     - ../.env:/app/.env
+     - dev-data:/data
+     - /var/lib/docker/volumes/dev-data/_data/data_api/node_modules:/app/node_modules
+    command: bash
+    stdin_open: true
+    tty: true
+    environment:
+      NODE_PATH: /data/data_api/node_modules
+volumes:
+  dev-data:
+    external: true

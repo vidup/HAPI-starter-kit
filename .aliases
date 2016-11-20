@@ -1,0 +1,2 @@
+up=npm install --only=dev && docker-compose up -d && docker attach data_api
+stop=docker-compose stop

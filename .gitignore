@@ -1,0 +1,8 @@
+node_modules
+.env
+#.vscode
+uploads
+dist
+npm-debug*
+.npmrc
+yarn-error.log
